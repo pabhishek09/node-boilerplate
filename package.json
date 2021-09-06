@@ -1,0 +1,37 @@
+{
+  "name": "node-boilerplate",
+  "version": "1.0.0",
+  "repository": "https://github.com/pabhishek09/node-boilerplate.git",
+  "description": "Simple and scalable boilerplate to create production ready node applications",
+  "author": "Abhishek Pandey<pabhishek.2009@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "scripts": {
+    "start": "pm2 start ./bin/www",
+    "stop": "pm2 stop www",
+    "dev": "DEBUG=http nodemon --config nodemon.json ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "pm2": "^5.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "keywords": [
+    "node",
+    "node.js",
+    "boilerplate",
+    "express",
+    "rest",
+    "api",
+    "web"
+  ]
+}
