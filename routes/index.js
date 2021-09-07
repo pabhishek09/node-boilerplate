@@ -4,12 +4,6 @@ const users = require("./users/index");
 
 const router = express.Router();
 
-/* GET home page. */
-router.get("/", function (req, res, next) {
-  res.render("index", { title: "Express" });
-});
-
-console.log("users", users);
 
 const routes = [ping, ...users];
 
