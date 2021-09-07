@@ -22,6 +22,7 @@
     "ejs": "~2.6.1",
     "eslint-config-prettier": "^8.3.0",
     "express": "~4.16.1",
+    "helmet": "^4.6.0",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
     "pm2": "^5.1.1"
@@ -42,6 +43,7 @@
     "express",
     "rest",
     "api",
-    "web"
+    "web",
+    "ejs"
   ]
 }
