@@ -11,19 +11,29 @@
   "scripts": {
     "start": "pm2 start ./bin/www",
     "stop": "pm2 stop www",
-    "dev": "DEBUG=http nodemon --config nodemon.json ./bin/www"
+    "dev": "DEBUG=http nodemon --config nodemon.json ./bin/www",
+    "format": "npx prettier --write .",
+    "lint": "eslint . --ext .js",
+    "lint:fix": "eslint . --ext .js --fix"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "ejs": "~2.6.1",
+    "eslint-config-prettier": "^8.3.0",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
     "pm2": "^5.1.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.12"
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "nodemon": "^2.0.12",
+    "prettier": "^2.3.2"
   },
   "keywords": [
     "node",

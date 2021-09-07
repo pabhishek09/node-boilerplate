@@ -1,10 +1,10 @@
-const method = 'get';
+const method = "get";
 
-const path = '/ping';
+const path = "/ping";
 
-const handler = async(req, res) => {
+const handler = async (req, res) => {
   res.send({
-    data: 'ok'
+    data: "ok",
   });
 };
 

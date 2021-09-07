@@ -1,16 +1,17 @@
-const method = 'get';
+const method = "get";
 
-const path = '/users';
+const path = "/users";
 
-const handler = async(req, res) => {
+const handler = async (req, res) => {
   res.send([
     {
-      id: '1',
-      name: 'John'
-    }, {
+      id: "1",
+      name: "John",
+    },
+    {
       id: 2,
-      name: 'Charles'
-    }
+      name: "Charles",
+    },
   ]);
 };
 
