@@ -8,7 +8,7 @@
   "scripts": {
     "start": "pm2 start ./bin/www",
     "stop": "pm2 stop www",
-    "dev": "concurrently \"npm run dev:server\" \"npm dev:client\"",
+    "dev": "concurrently npm:dev:server npm:dev:client",
     "dev:server": "DEBUG=http nodemon --config nodemon.json ./bin/www",
     "dev:client": "react-scripts start",
     "format": "npx prettier --write .",
