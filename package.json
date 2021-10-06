@@ -1,38 +1,51 @@
 {
-  "name": "node-boilerplate",
-  "version": "1.0.0",
-  "repository": "https://github.com/pabhishek09/node-boilerplate.git",
-  "description": "Simple and scalable boilerplate to create production ready node applications",
+  "name": "react-express-starter",
+  "version": "1.0.1",
+  "repository": "https://github.com/pabhishek09/react-express-starter",
+  "description": "Simple and scalable starter project to create production ready fullstack applications with express and react",
   "author": "Abhishek Pandey<pabhishek.2009@gmail.com>",
   "license": "MIT",
-  "engines": {
-    "node": ">=12.0.0"
-  },
   "scripts": {
     "start": "pm2 start ./bin/www",
     "stop": "pm2 stop www",
-    "dev": "DEBUG=http nodemon --config nodemon.json ./bin/www",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage",
+    "dev": "concurrently \"npm run dev:server\" \"npm dev:client\"",
+    "dev:server": "DEBUG=http nodemon --config nodemon.json ./bin/www",
+    "dev:client": "react-scripts start",
     "format": "npx prettier --write .",
     "lint": "eslint . --ext .js",
     "lint:fix": "eslint . --ext .js --fix",
+    "test": "jest",
+    "test:client": "react-scripts test",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "build:client": "react-scripts build",
+    "build:server": "",
     "docker:dev": "",
     "docker:stg": "",
-    "docker:prod": ""
+    "docker:prod": "",
+    "eject:cra": "react-scripts eject"
   },
   "dependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
     "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
     "debug": "~2.6.9",
+    "dotenv": "^10.0.0",
     "ejs": "~2.6.1",
     "express": "~4.16.1",
     "helmet": "^4.6.0",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
-    "pm2": "^5.1.1"
+    "pm2": "^5.1.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.1.2"
   },
   "devDependencies": {
+    "concurrently": "^6.3.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-standard": "^16.0.3",
@@ -40,10 +53,31 @@
     "eslint-plugin-jest": "^24.4.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
-    "jest": "^27.1.0",
+    "jest": "^26.6.0",
     "nodemon": "^2.0.12",
     "prettier": "^2.3.2",
     "supertest": "^6.1.6"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
   "keywords": [
     "node",
@@ -53,6 +87,8 @@
     "rest",
     "api",
     "web",
-    "ejs"
+    "react",
+    "react-js",
+    "fullstack"
   ]
 }

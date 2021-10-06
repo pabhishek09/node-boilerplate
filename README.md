@@ -1,6 +1,6 @@
-# node-boilerplate
+# react-express-starter
 
-Simple and scalable boilerplate to create production ready node applications
+Simple and scalable starter project to create production ready fullstack applications with express and react.
 
 ## Next up -
 

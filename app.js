@@ -4,15 +4,13 @@ const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const helmet = require("helmet");
+const cors = require("cors");
 
 const indexRouter = require("./routes/index");
 const viewsRouter = require("./views/index");
 
 const app = express();
-
-// view engine setup
-app.set("views", path.join(__dirname, "views"));
-app.set("view engine", "ejs");
+require('dotenv').config();
 
 app.use(logger("dev"));
 app.use(express.json());
@@ -28,6 +26,19 @@ app.use("/api", indexRouter);
 app.use(function (req, res, next) {
   next(createError(404));
 });
+
+const allowedOrigins = process.env.ALLOWED_ORIGINS.split(' ');
+
+const corsOptions = {
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true)
+    } else {
+      callback(new Error('Not allowed by CORS'))
+    }
+  }
+}
+app.use(cors(corsOptions));
 
 // error handler
 app.use(function (err, req, res, next) {
