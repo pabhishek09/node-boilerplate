@@ -2,15 +2,26 @@
 
 Simple and scalable starter project to create production ready fullstack applications with express and react.
 
-## Next up -
+## Running the application locally
+### As a docker container
+Run `docker up --build` to run the application in development mode
+### Natively without docker 
+Run `npm run dev` to run the application 
+
+## Deploying application 
+
+### As a docker container
+### Node application without containers
+
+
+## Scheme of things -
 
 - Add ping endpoint & example users validation - `done`
 - Linting with eslint - `done`
 - Formatting with prettier & check harmony - `done`
 - Process management with pm2 - `wip:abhishek` add pm2 management scrips to npm scripts
-- Test case setup with jest/supertest
-- Use Babel for module imports
-- Dockerise the application with docker-compose
+- Test case setup with jest/supertest - `done`
+- Dockerise the application with docker-compose - `wip: dev is done, prod setup tbd`
 - Add a sample Git Worflow file for CI
 - Add response middleware
 - Add authentication & authoristion features with passport or similar package

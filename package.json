@@ -6,7 +6,7 @@
   "author": "Abhishek Pandey<pabhishek.2009@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "pm2 start ./bin/www",
+    "start": "node ./bin/www",
     "stop": "pm2 stop www",
     "dev": "concurrently npm:dev:server npm:dev:client",
     "dev:server": "DEBUG=http nodemon --config nodemon.json ./bin/www",

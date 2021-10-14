@@ -6,7 +6,7 @@ const handler = async (req, res) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Credentials", true);
   res.send({
-    data: "API ok",
+    data: "API ok!",
   });
 };
 

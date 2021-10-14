@@ -7,7 +7,6 @@ const helmet = require("helmet");
 const cors = require("cors");
 
 const indexRouter = require("./routes/index");
-const viewsRouter = require("./views/index");
 
 const app = express();
 require('dotenv').config();
@@ -15,11 +14,12 @@ require('dotenv').config();
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(helmet());
+app.use(helmet({
+  contentSecurityPolicy: false,
+}));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "build")));
 
-app.use("/", viewsRouter);
 app.use("/api", indexRouter);
 
 // catch 404 and forward to error handler
