@@ -6,13 +6,6 @@ const reportWebVitals = onPerfEntry => {
       const fcp = getFCP(onPerfEntry);
       const lcp = getLCP(onPerfEntry);
       const ttfb = getTTFB(onPerfEntry);
-      console.log('Web vitals performace report', {
-        cls,
-        fid,
-        fcp,
-        lcp,
-        ttfb
-      })
     });
   }
 };
