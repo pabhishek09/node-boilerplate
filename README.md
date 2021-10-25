@@ -4,16 +4,16 @@ Simple and scalable starter project to create production ready fullstack applica
 
 ## Running the application locally
 ### As a docker container
-Run `docker up --build` to run the application in development mode
+Run `docker-compose -f docker-compose.yml -f docker-compose-dev.yml up --build` to run the application in development mode with live reload on the client side on port 3000
 ### Natively without docker 
 Run `npm run dev` to run the application 
 
 ## Deploying application 
 
 ### As a docker container
+Run `docker-compose up --build` to run the application as a docker container 
 ### Node application without containers
-
-
+Run `npm start` to run the application 
 ## Scheme of things -
 
 - Add ping endpoint & example users validation - `done`

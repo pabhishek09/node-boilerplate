@@ -4,8 +4,8 @@ RUN mkdir /home/node/src
 
 WORKDIR /home/node/src
 
-COPY --chown=node:node ../ . 
+COPY --chown=node:node . . 
 
-RUN npm ci
+RUN npm i
 
-CMD ["npm", "start"]
+CMD ["npm", "run", "dev"]

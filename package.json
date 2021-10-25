@@ -7,7 +7,6 @@
   "license": "MIT",
   "scripts": {
     "start": "node ./bin/www",
-    "stop": "pm2 stop www",
     "dev": "concurrently npm:dev:server npm:dev:client",
     "dev:server": "DEBUG=http nodemon --config nodemon.json ./bin/www",
     "dev:client": "react-scripts start",
@@ -19,10 +18,6 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "build:client": "react-scripts build",
-    "build:server": "",
-    "docker:dev": "",
-    "docker:stg": "",
-    "docker:prod": "",
     "eject:cra": "react-scripts eject"
   },
   "dependencies": {
