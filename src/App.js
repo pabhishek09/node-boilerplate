@@ -16,7 +16,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>React express starter project!!</h1>
+      <h1>React express starter project</h1>
       <h3>{apiStatus}</h3>
     </div>
   );
